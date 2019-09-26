@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-image: url('images/headerback1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1px 1px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 1px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-right {
+  float: right;
+}
+
+.avatar{
+   border-radius: 50%;
+
+}
+
+.header{
+    float:left;
+   width: 100%;
+   padding: 10px 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left:310px;
+    padding-right: 40px;
+    overflow: hidden;
+    background-color:  #000066;
+}
+
+.menubar {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #ffffff;
+	color: #000066;
+}
+
+li.account {
+    float:right;
+	font-size: 13px;
+    
+}
+
+.vertical-menu {
+    width: 275px;
+    
+    overflow-y: auto;
+}
+
+.vertical-menu a {
+    background-color:#141452 ;
+    color: white;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*css for the image slider*/
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: #141452;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.wholesite{
+  height:auto;
+  zoom: 150%;
+}
+.newslist{
+ float:right;
+ font-size:14px;
+ width:30%;
+ }
+
+ 
+
+</style>
+</head>
+<body class="wholesite">
+
+<div class="header">
+  <img src="images/logo1.png" alt="E-SHAMBA Logo." height="150" width="170">
+  <div class="header-right">
+      <img src="images/avatar.png" class="avatar" alt="E-SHAMBA Logo." height="150" width="160">
+  </div>
+</div>
+
+<h3>&nbsp </h3>
+
+<ul>
+   <li class= "menubar"><a href="homeinterface2.html">Home &nbsp&nbsp </a></li>
+   <li class= "menubar"><a href="advertise.html">Advertise &nbsp&nbsp </a></li>
+   <li class= "menubar"><a href="about.html">About Us &nbsp&nbsp </a></li>
+   <li class= "menubar"><a href="contact.html">Contact us.</a></li>
+   <div class="dropdown">
+    <button class="dropbtn">Account 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="index.html">Log out</a>
+    </div>
+  </div> 
+</ul>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/bailer1.jpg" style="width:100%">
+  <div class="text">Balers</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/mower1.jpg" style="width:100%">
+  <div class="text">Mowers</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/plough1.jpg" style="width:100%">
+  <div class="text">Deep Tillage Equipment</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/planter1.jpg" style="width:100%">
+  <div class="text">Power Harrow</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/maizechopper1.jpg" style="width:100%">
+  <div class="text">Maize Choppers.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/roller1.jpg" style="width:100%">
+  <div class="text">Bale Wrapper</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/fertilizer1.jpg" style="width:100%">
+  <div class="text">Mounted Boom Sprayer</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/harvester1.jpg" style="width:100%">
+  <div class="text">Shredder</div>
+  </div>
+
+<div class="mySlides fade">
+  <img src="images/plough2.jpg" style="width:100%">
+  <div class="text">Mouldboard Plough</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/grasscutter1.jpg" style="width:100%">
+  <div class="text">Hay Tedder</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+
+</div>
+  
+  
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="pagecontent">
+  <div class="newslist">
+   <ol style="list-style: none;">
+   <li><h1>Top Stories.</h1></li>
+    <a href="https://www.nation.co.ke/business/seedsofgold/Farm-machinery-is-my-business/2301238-4673664-w8b0i6z/index.html"><li><b>Farm machinery is my business - Daily Nation</b></li></a>
+	     <h5><img src="images/rhino.jpg" alt="alt text" style="float: left" width="70" height="60" > An inspiring story of how Geoffrey Nyaberi built the first
+		 indigenously owned farm machinery company from scratch....<h5><br>
+		 
+    <a href="https://www.the-star.co.ke/news/2017/03/14/makueni-farmers-abandon-maize-for-drought-resistant-crops_c1523215"><li>Makueni farmers abandon maize for drought-resistant crops</li></a>
+	     <h5><img src="images/makuenirest.jpg" alt="alt text" style="float: left" width="70" height="60" >As the drought continues to ravage parts of the country,
+	     farmers in Makueni have nothing to worry about since they have millet, sorghum and green grams to eat...<h5>
+    <a href="https://www.the-star.co.ke/news/2017/03/13/potato-processors-contract-23000-farmers-to-meet-consumer-demand_c1523258"><li>Potato processors contract farmers to meet consumer demand</li></a>
+	      <h5><img src="images/potato.jpg" alt="alt text" style="float: left" width="70" height="60" > Some 23,000 farmers in 13 potato-producing counties	have signed contracts
+		       with various processors in Kenya to buy the produce to supply...<h5>
+	
+    <a href="https://www.the-star.co.ke/news/2016/03/31/wild-plants-related-to-maize-rice-and-wheat-missing-in-crop-banks_c1322629"><li>Wildplants related to maize and wheat missing in crop banks</li></a>  
+	      <h5><img src="images/wildplants.jpg" alt="alt text" style="float: left" width="70" height="60" > Many of the wild plants that will be used for future food supply have not been conserved in crop banks according to a new research.......<h5>
+						
+	<a href="https://www.the-star.co.ke/news/2016/03/25/karura-forest-gets-biological-control-of-pests_c1319625"><li>Karura forest gets biological control of pests</li></a>
+	      <h5><img src="images/karura.jpg" alt="alt text" style="float: left" width="70" height="60" >Foresters at Karura have introduced biological control treatment to tree seedlings to fight pests  and diseases.<h5>
+	
+	
+	<a href="https://www.the-star.co.ke/news/2016/03/08/eldoret-show-focuses-on-mechanised-agriculture_c1305870"><li>Eldoret show focuses on mechanised agriculture</li></a>
+	    <h5><img src="images/eldoret.jpg" alt="alt text" style="float: left" width="70" height="60" >Under the theme ‘Enhancing Technology in Agriculture and Industry for Food Security and National Growth’, the fair, that was held last week at the Eldoret show ground...<h5>
+	
+	<a href="https://www.the-star.co.ke/news/2016/03/08/makueni-farmers-adopt-technology-in-horticulture-farming_c1302294"><li>Makueni farmers adopt technology in horticulture farming</li></a>
+	      <h5><img src="images/makueni2.jpg" alt="alt text" style="float: left" width="70" height="60" >Julius Mutio, a middle aged man from Makueni county, is making a kill from mango and orange fruit farming....<h5>
+	
+	<a href="https://www.the-star.co.ke/news/2016/03/08/avocado-disease-hits-muranga-kiambu_c1303586"><li>Avocado disease hits Murang’a, Kiambu</li></a>
+	     <h5><img src="images/avocado.jpg" alt="alt text" style="float: left" width="70" height="60" >Avocado farmers have been cautioned against a disease that has been detected in Murang’a and neighbouring counties....<h5>
+	
+	<a href="https://www.the-star.co.ke/news/2016/03/01/jaramogi-university-makes-biscuits-porridge-flour-from-crickets_c1288630"><li>Jaramogi university makes biscuits, porridge flour from crickets</li></a>
+	   <h5><img src="images/jara.jpg" alt="alt text" style="float: left" width="70" height="60" >Jaramogi University,a local university has started using crickets to make queen cakes, biscuits and porridge flour....<h5>
+	
+	<a href="https://www.the-star.co.ke/news/2016/03/01/embu-farmer-finds-riches-in-growing-tree-tomato-fruits_c1301738"><li>Embu farmer finds riches in growing tree tomato fruits</li></a>
+	    <h5><img src="images/embu.jpg" alt="alt text" style="float: left" width="70" height="60" >Suleiman Njeru started with tomato farming in 2010 but the crop did not yield much and he incurred huge losses due to the harsh humid climate....<h5>
+		 
+	</ol>
+    </div> 
+
+     <div class="offers">
+   <ol style="list-style: none;"><br>
+    <a href="baler1.html"><li><b>KUHN Baler, Nakuru - @15,000 per day</b></li></a>
+	     <h5><img src="images/b1.jpg" alt="alt text" style="float: left" width="150" height="110" >KUHN Bailer. The KUHN baler series 500. Well known for its 
+		 great and compact size bales with rope provision.<br>
+		 Location: Nakuru(	Behind Kenbelt Industrial Park.)<br>Price: Kshs 15,000<br>No machine operator provided.<h5><br>
+		 
+    <a href="cicoriabaler.html"><br><li>Cicoria Baler, Nairobi - @10,000 per day</li></a>
+	     <h5><img src="images/c1.jpg" alt="alt text" style="float: left" width="150" height="110" >CICORIA Bailer. The CICORIA baler greatly competes against most brands, including the KUHN series 500. Is also easier to operate.<br>
+		 Location: Nairobi(Opposite Wells Fargo. Old Mombasa Road.)<br>Price: Kshs 10,000<br>Machine operator provided if required(Operator fee is separate).<h5><br>
+		 
+    <a href="kuhnmower1.html"><br><li>KUHN Mower, Narok - @6,000 per day</li></a>
+	      <h5><img src="images/m1.jpg" alt="alt text" style="float: left" width="150" height="110" > KUHN Mowers. The KUHN Mower is well known for its easy operation. Its compact nature also
+		  makes it more portable due to its light weight.<br>Location: Narok.(Call for more details)<br>Price: Kshs 6000<br>No machine operator provided.<h5><br>
+	
+    <a href="#"><br><li>KUHN Tractor, Nairobi - @40,000 per day</li></a>  
+	      <h5><img src="images/t1.jpg" alt="alt text" style="float: left" width="150" height="110" >KUHN Tractor Elite Series. 300 horse power makes it the best to trail along almost any farming equipment.
+		  Location: Nairobi.(Call for more details)<br>Price: Kshs 40,000<br>Operator can be provided if required(at a fee)<h5><br><br>
+						
+	<a href="#"><br><li>KUHN Planter, Kitale - @14,000 per day</li></a>
+	      <h5><img src="images/p1.jpg" alt="alt text" style="float: left" width="150" height="110" >KUHN Planter s650. Can plant upto 32 rows on each run.
+         <br>Location: Kitale.(Call for more details)<br>Price: Kshs 14,000<br>No machine operator provided<h5><br><br>
+	
+	<a href="#"><li>KUHN Planter, Kitale - @12,500 per day</li></a>
+	      <h5><img src="images/p1.jpg" alt="alt text" style="float: left" width="150" height="110" >KUHN Planter s650. Can plant upto 32 rows on each run. No disposal filters included.
+         <br>Location: Kitale.(Call for more details)<br>Price: Kshs 12,500<br>No machine operator provided<h5><br><br>
+	
+	<a href="#"><li>KUHN Sprayers, Bura - @23,000 per day</li></a>
+	   <h5><img src="images/sp1.jpg" alt="alt text" style="float: left" width="150" height="110" >KUHN Sprayer Series 92NM. Long range spray jets makes sure it covers a long area
+	   at a go with less wastage.<br>Location: Bura(Near Galole Irrigation Scheme.)<br>Price: Kshs 23,000<br>No machine operator provided.<h5><br>
+	
+	<a href="#"><br><li>KUHN Planter, Molo - @9,000 per day</li></a>
+	    <h5><img src="images/smp1.jpg" alt="alt text" style="float: left" width="150" height="110" >Small KUHN S Series Planter. Does 12 rows on each run. Disposal filters included.
+		<br>Location: Molo, Nakuru.<br>Price: Kshs 9,000<br>No machine operator provided.<h5><br><br>
+		 
+	
+	 </ol>
+    </div> 	
+	
+</div>
+
+</body>
+</html>
